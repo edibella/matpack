@@ -1,0 +1,27 @@
+{
+  "name": "matpack",
+  "version": "2.0.0",
+  "description": "Command Line tools for npm matlab packages",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edibella/matpack.git"
+  },
+  "keywords": [
+    "matlab",
+    "package",
+    "management"
+  ],
+  "author": "KC Erb <iamkcerb@gmail.com> (http://kcerb.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edibella/matpack/issues"
+  },
+  "homepage": "https://github.com/edibella/matpack#readme",
+  "dependencies": {
+    "yargs": "^4.7.1"
+  }
+}
