@@ -2,10 +2,6 @@
   "name": "matpack",
   "version": "2.0.0",
   "description": "Command Line tools for npm matlab packages",
-  "main": " ",
-  "scripts": {
-    "test": " "
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edibella/matpack.git"
@@ -21,7 +17,11 @@
     "url": "https://github.com/edibella/matpack/issues"
   },
   "homepage": "https://github.com/edibella/matpack#readme",
+  "bin": {
+    "matpack": "index.js"
+  },
   "dependencies": {
-    "yargs": "^4.7.1"
+    "prompt": "^1.0.0",
+    "validate-npm-package-name": "^2.2.2"
   }
 }
