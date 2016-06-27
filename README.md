@@ -2,6 +2,41 @@
 
 A command line tool for quickly starting a new MATLAB package that uses the [Node package manager](https://www.npmjs.com/) (NPM) for its package / dependency management.
 
+### Quick Start
+
+If you don't know what Node, NPM, or MATLAB are, this section is not for you.
+
+1) Get the matpack executable
+
+```
+$ npm install -g matpack
+```
+
+2) Run it and give it your MATLAB package name and your NPM package name.
+
+```
+$ matpack
+> +TestPackage
+> test-package
+```
+
+3) You can publish your package immediately (assuming the name is available)
+
+```
+$ npm publish
+```
+
+4) Now you can run a smoke test of your MATLAB package. Just go to a new directory and then:
+
+```
+$ npm install test-package
+$ cd node_modules
+$ matlab
+> TestPackage.test
+```
+
+If the above isn't crystal clear hopefully the following will help. If it doesn't, please let me know, I'd love to spend time improving the docs.
+
 # The Big Idea
 
 ## Node
@@ -31,7 +66,7 @@ As you can imagine this kind of thing can get quite complex with hundreds of dep
 Once you have a grasp of basic concepts like modular package development, version control, and package / dependency management you're ready to create your first MATLAB package. This tool is here to provide a skeleton for that package.
 
 1. Install Node
-2. `npm install matpack -g`
+2. `npm install -g matpack`
 3. `matpack`
 
 This will bring up a prompt asking for the MATLAB name of your package and the NPM name. The fact that there are two names is a big deal. Unfortunately there is a major conflict between the way NPM handles package names and the way MATLAB handles them. NPM requires that they be URL safe (no special characters in the name like `+`) and MATLAB requires that the folder name begin with a `+` in order to mark it as a package.
